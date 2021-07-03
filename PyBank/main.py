@@ -14,9 +14,7 @@ with open(csvpath) as csvfile:
 #print(amount)
 
 #1. The total number of months included in the dataset
-totalMonth = 0
-for month in date:
-    totalMonth += 1
+totalMonth = len(date)
 #print(totalMonth)
 
 #2. The net total amount of "Profit/Losses" over the entire period
