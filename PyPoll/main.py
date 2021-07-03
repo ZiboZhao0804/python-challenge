@@ -1,15 +1,13 @@
-#read the csv data file and store id, county and candidate in three lists
+#read the csv data file and store voter id and Candidate in two lists - id and candidate
 import os,csv
 csvpath = os.path.join('Resources','election_data.csv')
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile,delimiter=',')
     csv_header = next(csvreader)
     id = []
-    county = []
     candidate = []
     for row in csvreader:
         id.append(row[0])
-        county.append(row[1])
         candidate.append(row[2])
 
 #1. The total number of votes cast
