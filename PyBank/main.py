@@ -66,9 +66,9 @@ str7 = f"Greatest Decrease in Profits: {date_Dec} (${profit_Dec})"
 lines = [str1, str2, str3, str4, str5, str6, str7] 
 for line in lines:
     print(line)
-    
+
 #write the results into a text file
-output_file = 'analysis.txt'
+output_file = os.path.join('analysis','analysis.txt')
 with open(output_file, 'w') as text:
     for line in lines:
         text.write(line)
