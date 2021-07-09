@@ -12,11 +12,9 @@ with open(csvpath) as csvfile:
 
 #1. The total number of votes cast
 totalVotes = len(id)
-#print(totalVotes)
 
 #2. A complete list of candidates who received votes
-candidate_list = list(set(candidate))   
-#print(candidate_list)
+candidate_list = list(set(candidate))
 
 #3. The percentage of votes each candidate won & The total number of votes each candidate won
 votes = [0]*len(candidate_list)
@@ -27,8 +25,6 @@ for i in range(len(candidate_list)):
             votes[i] += 1
 for i in range(len(percentage)):
     percentage[i] = round(votes[i]/totalVotes*100,3)
-#print(votes)
-#print(percentage)
 
 #4. The winner of the election based on popular vote.
 vote = votes[0]
@@ -37,7 +33,6 @@ for i in range(len(votes)-1):
     if votes[i+1] > vote:
         winner = candidate_list[i+1]
         vote = votes[i+1]
-#print(winner)
 
 #print out the results
 str1 = "Election Results"
